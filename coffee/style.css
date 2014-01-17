@@ -1,0 +1,104 @@
+/*
+Plugin: jQuery Parallax
+Version 1.1.3
+Author: Ian Lunn
+Twitter: @IanLunn
+Author URL: http://www.ianlunn.co.uk/
+Plugin URL: http://www.ianlunn.co.uk/plugins/jquery-parallax/
+
+License: http://creativecommons.org/licenses/by-sa/3.0/ (Attribution Share Alike). Please attribute work to Ian Lunn simply by leaving these comments in the source code or if you'd prefer, place a link on your website to http://www.ianlunn.co.uk/.
+*/
+
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
+/* CSS Document */
+
+body{
+	margin: 0;
+	padding: 0;
+}
+p{
+    padding:15px;
+}
+
+p, ul{
+	font-family:"Josefin Sans", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size-adjust:0.488;
+	font-weight:200;
+	font-style:normal;
+    font-size:0.6em;
+    line-height:1.4em;
+}
+
+img{
+	border: 0;
+}
+
+
+
+.center{
+	font-size: 2.5em;
+	padding: 40px 0;
+	text-align: center;
+    
+}
+
+.first .story{
+    position:absolute;
+/*    top:10%;*/
+    width:100%;
+}
+
+.first p{
+    font-size:1.1em;
+    font-family:Josefin Sans, sans-serif;
+}
+
+
+
+section{
+    background-attachment:fixed;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    background-size:cover;
+    margin:0 auto;
+    padding:0;
+    height:450px;
+    color:white;
+}
+        
+
+.story{
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.story .float-left, .story .float-right{
+	padding: 100px 0 0 0;
+	position: relative;
+	width: 350px;	
+}
+
+@media screen and (min-width:640px){
+    .first p{
+        font-weight:900;
+        font-size:2em;
+    }
+
+    p{
+        font-size:0.9em;
+        font-family:'Josefin Sans', sans-serif;
+    }
+
+    section{
+        height:820px;
+    }
+
+    .story{
+        min-width:960px;
+        width:960px;
+    }
+    .center{
+        margin-top:10%;
+    }
+}

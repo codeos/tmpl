@@ -1,0 +1,120 @@
+
+@font-face {
+	font-family:Crete Round;
+	src:url(../font/Crete_Round.woff);
+}
+
+@font-face {
+	font-family:GeosansLight;
+	src:url(../font/GeosansLight.ttf);
+}
+
+p{
+    font-family:GeosansLight, sans-serif;
+}
+
+.main{
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-position:50% 50%;
+    background-attachment:fixed;
+    background-image:url(../images/main-background.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    overflow-y:scroll;
+}
+
+section{
+    min-height:340px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.panel-center{
+/*    background-color:rgba(255,255,255,.1);*/
+    margin:20px 10px;
+    padding:10px;
+}
+
+.section-first{
+    
+}
+
+
+.page-title{
+    text-align:center;
+    color:white;
+    margin-top:120px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-family:Crete Round,sans-serif;
+}
+
+.page-btn-download{
+    display:block;
+    width:120px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    color:white;
+    margin:25px auto;
+    border:2px solid white;
+    border-radius:4px;
+    transition:all 0.3s;
+}
+
+.page-btn-download:hover{
+    text-decoration:none;
+    color:white;
+    background-color:rgba(255,255,255,.1);
+}
+
+.panel-center img{
+    width:100%;
+    height:100%;
+    background-color:rgba(255,255,255,.1);
+    padding:10px;
+    box-shadow:0 1px 4px rgba(0,0,0,0.2);
+}
+
+.panel-center p{
+    padding:10px;
+    text-align:center;
+    margin:10px auto;
+    color:white;
+}
+
+
+
+
+@media screen and (min-width:640px) {
+    section{
+        height:850px;
+    }
+    .section-first{
+        
+        
+    }
+    .page-title{
+        font-size:100px;
+        font-weight:200;
+        margin-top:250px;
+        padding:20px 0;
+    }
+
+    .panel-center{
+        margin:50px auto;
+        height:500px;
+        color:white;
+    }
+
+    .panel-center p{
+       font-size:34px;
+    }
+    
+    .page-btn-download{
+        width:200px;
+        height:60px;
+        line-height:60px;
+    }
+    
+}
