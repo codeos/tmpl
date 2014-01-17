@@ -1,0 +1,15 @@
+
+
+<% section_color = "section-color-#{index % 3}" %> 
+ <section class="<%= section_color %>" id="section<%= index + 1 %>">
+  <div class="container">
+    <div class="row">
+    	<% if section.photo %> <div class="section-img" style="background-image:url(<%= section.photo %>)"></div> <% end %>
+    	<p class="page-text p-tc"><%= section.text %></p>	
+	</div>
+  </div>
+  <% if index != size-1 %>
+  <a class="nav-next" href="#section<%= index + 2 %>"><i class="icon-chevron-down"></i></a>
+  <% end %>
+</section>
+

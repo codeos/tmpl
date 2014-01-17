@@ -1,0 +1,49 @@
+<html>
+<head>
+  <link href="{{layout}}.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="initial-scale=1" />
+  <meta http-equiv="content-type" content="textml;charset=utf-8">
+</head>
+
+<body>
+  <ul id="nav">
+    <li>
+        <a href="#section0">&nbsp;&nbsp;&nbsp;</a>
+  </li>
+    {{# sections}}
+      <li>
+        <a href="#section{{anchor}}">&nbsp;&nbsp;&nbsp;</a>
+      </li>   
+    {{/ sections}}
+  </ul>
+
+
+   <section class="section-index color-index" id="section0">
+    <div class="container">
+      <div class="row">
+        <h1 class="page-title">{{ title }}</h1>
+    </div>
+    </div>
+    <a class="nav-next" href="#section1"><i class="icon-chevron-down"></i></a>
+  </section>
+
+  {{# sections}}
+
+     <section class="do colr here" id="section{{ anchor }}">
+      <div class="container">
+        <div class="row">
+          {{# photo}} 
+            <div class="section-img" style="background-image:url('{{ photo }}')"></div>
+          {{/ photo}}
+          <p class="page-text p-tc">{{ text }}</p> 
+      </div>
+      </div>
+      {{# ifNotLast }}
+        <a class="nav-next" href="#section{{anchorNext}}"><i class="icon-chevron-down"></i></a>
+      {{/ ifNotLast}}
+    </section>
+
+  {{/ sections}}
+
+  <a href="#top" id="toTop">^</i></a>
+</body>

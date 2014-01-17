@@ -1,0 +1,66 @@
+<html>
+<head>
+  <link href="{{layout}}.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="initial-scale=1" />
+  <meta http-equiv="content-type" content="textml;charset=utf-8">
+</head>
+
+<body>
+  <ul id="nav">
+  	{{# sections}}
+  		<li>
+       	<a href="#section{{ anchor }}">&nbsp;&nbsp;&nbsp;</a>
+      </li>		
+  	{{/ sections}}
+  </ul>
+
+  {{# sections}}
+  <section class="{{ bgColor }} {{ isFirst }}" id="section{{ anchor }}">
+    
+      {{# photo}} 
+        <div class="cover submarine" style="background-image: url('{{ photo }}'); position: relative;">
+      {{^ photo}}
+        <div class="cover submarine" style="position: relative">
+      {{/ photo}}
+
+        <div class="center caption">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+
+                {{# isFirst}}
+                  {{# logo}}
+                  <div style="width:150px; height:150px; margin: 0 auto;">
+                    <img style="width:100%; height:100%" class="img-circle" src='{{logo}}' />
+                  </div>
+                  {{/ logo}}
+
+                  {{# photo }}
+                    <h1 class="photo">{{ text }}</h2>
+                  {{^ photo}}
+                    <h1 class="noPhoto">{{ text }}</h2>
+                  {{/ photo}}
+
+                {{^ isFirst}}
+                  {{# photo }}
+                    <h2 class="photo">{{ text }}</h2>
+                  {{^ photo}}
+                    <h2 class="noPhoto">{{ text }}</h2>
+                  {{/ photo}}
+                {{/ isFirst}}
+                
+              </div><!-- col-lg-12-->
+            </div><!-- row -->
+          </div><!-- container -->
+        </div><!-- caption -->
+        
+      </div><!-- cover -->
+      {{# ifNotLast }}
+        <a class="nav-next" href="#section{{anchorNext}}"><i class="icon-chevron-down"></i></a>
+      {{/ ifNotLast}}
+  </section>
+
+  {{/ sections}}
+
+  <a href="#top" id="toTop">^</i></a>
+</body>

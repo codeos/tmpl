@@ -1,0 +1,30 @@
+
+    <ul id="nav">
+    	<li>
+		     	<a href="#section0">&nbsp;&nbsp;&nbsp;</a>
+		</li>
+    	<% @sections.each_with_index do |section,index| %>
+    		<li>
+		     	<a href="#section<%= index + 1 %>">&nbsp;&nbsp;&nbsp;</a>
+		    </li>		
+    	<% end %>
+    </ul>
+
+
+ <section class="section-index color-index" id="section0">
+  <div class="container">
+    <div class="row">
+			<h1 class="page-title"><%= @page.title %></h1>
+	</div>
+  </div>
+  <a class="nav-next" href="#section1"><i class="icon-chevron-down"></i></a>
+</section>
+
+<% @sections.each_with_index do |section,index| %>
+
+    <%= render 'pages/section_life' , :section => section, :index => index ,:size => @sections.size %>
+
+<% end %>
+
+<a href="#top" id="toTop">^</i></a>
+
