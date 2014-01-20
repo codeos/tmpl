@@ -86,6 +86,8 @@ section{
 
 
 
+
+
 @media screen and (min-width:640px) {
     section{
         height:850px;
@@ -115,6 +117,42 @@ section{
         width:200px;
         height:60px;
         line-height:60px;
+    }
+
+
+    .contact-lists{
+        padding:0;
+        text-align:center;
+        z-index:1000;
+    }
+
+    .contact-lists li{
+        width:48px;
+        height:48px;
+        line-height:48px;
+        border-radius:50%;
+        font-size:28px;
+        text-align:center;
+        list-style-type:none;
+        margin:10px auto;
+        display:inline-block;
+        -webkit-transition:all 0.3s;
+        transition:all 0.3s;
+    }
+    
+    .contact-lists li:hover i{
+        font-size:30px;
+    }
+    
+
+    .contact-lists a:hover{
+        text-decoration:none;
+    }
+
+    .contact-lists i{
+        color:rgb(255,255,255);
+        -webkit-transition:all 0.4s;
+        transition:all 0.4s;
     }
     
 }
